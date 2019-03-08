@@ -2,15 +2,76 @@
 <html>
     <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
             <script type = "text/javascript" src = "{{ url_for('static', filename = 'js/index.js') }}"></script>
         <title>Learner's App</title>
         <body>
-            <form method="POST" action="/create_session">
-            <input type="submit" name="Create Session" value="Create Session" />
-            </form>
+            
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">Active learning Environment Using 3Dmol.js</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Signup</a>
+            </li>
+        </ul>
+      </nav>
+      <div class="container">
+            <h2>Exisiting Sessions</h2>
+            <p>Create new Session/ Click on the row to join a session</p>  
+            <form class="form-inline" method="POST" action="/create_session">
+                <input type="submit" class="btn btn-light btn-lg lg-0" name="Create Session" value="Create Session" /><br/>
+            </form>          
+            <table class="table table-dark table-hover">
+              <thead>
+                <tr>
+                  <th>Session Id</th>
+                  <th>Session Name</th>
+                  <th>Short Description</th>
+                  <th>Created By</th>
+                  <th>Students Joined</th>
+                  <th>Start Time</th>
+                  <th>End Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>101</td>
+                  <td>Structure of Proteins</td>
+                  <td>Lecture on AA structure and Peptide Bonds</td>
+                  <td>dkoes@gmail.com</td>
+                  <td>180</td>
+                  <td>16:20</td>
+                  <td>27:20</td>
+                </tr>
+                <tr>
+                        <td>102</td>
+                        <td>Protein folding and Unfolding</td>
+                        <td>Levinthal's Paradox, Modelling</td>
+                        <td>dkoes@gmail.com</td>
+                        <td>280</td>
+                        <td>17:20</td>
+                        <td>18:20</td>
+                </tr>
+               
+                <tr>
+                        <td>103</td>
+                        <td>Anything and Everything</td>
+                        <td>Anyone</td>
+                        <td>anyone@example.com</td>
+                        <td>10</td>
+                        <td>20:20</td>
+                        <td>21:20</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      <br>
+            
             <form method="POST" action="/join_session">
             <input type="submit" name="Join Session" value="Join Session" />
             </form>
