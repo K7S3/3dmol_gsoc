@@ -8,8 +8,12 @@
             <script type = "text/javascript" src = "{{ url_for('static', filename = 'js/index.js') }}"></script>
         <title>Learner's App</title>
         <body>
-            <button onclick="create_session()">Create Session</button>
-            <button onclick="join_session()">Join Session</button>
+            <form method="POST" action="/create_session">
+            <input type="submit" name="Create Session" value="Create Session" />
+            </form>
+            <form method="POST" action="/join_session">
+            <input type="submit" name="Join Session" value="Join Session" />
+            </form>
         </body>
     </head>
 </html>
