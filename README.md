@@ -1,2 +1,4 @@
 # 3dmol_gsoc
-Repo for testing
+This repo contains the initial flask app built while understanding the requirements for the GSOC project
+
+![ScreenShot](./screenshot_flask_app.png)
